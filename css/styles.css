@@ -10,11 +10,47 @@
     /* transform: scale(0.5, 0.25); */
 
     /* flips the x-axis */
-    transform: scale(-5, 1);
-    transform: scaleX(-5);
+    /* transform: scale(-5, 1);
+    transform: scaleX(-5); */
 
     /* flips the y-axis */
     /* transform: scale(1, -5);
     transform: scaleY(-5); */
+    float: right;
 }
 
+.box {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin: 20px;
+}
+
+.skew-20 {
+    transform: skewX(20deg);
+}
+
+.skew-neg-20 {
+    /* transform: skewX(-20deg); */
+    animation: skew-horizontal 0.5s infinite;
+    animation-direction: alternate;
+}
+
+.skew-neg50 {
+    transform: skewX(-50deg);
+}
+
+@keyframe skew-horizontal {
+    0% {
+        transform: skewX(20deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: skewX(120deg);
+        opacity: 0.5;
+    }
+}
+
+@keyfram 
